@@ -8,7 +8,7 @@ set -eu
   printf '\n# END PDFium license\n\n'
 
   printf '\n# BEGIN libpng license\n\n'
-  sed -n '4,36p' third_party/libpng/LICENSE
+  sed -n '4,36p' third_party/libpng16/LICENSE
   printf '\n# END libpng license\n\n'
 
   printf '\n# BEGIN LibTIFF License\n\n'
@@ -28,22 +28,7 @@ set -eu
   printf '\n# END lcms license note\n\n'
 
   printf '\n# BEGIN openjpeg license note\n\n'
-  sed -n '1,/\*\//p' third_party/libopenjpeg/openjpeg.c
+  sed -n '1,/\*\//p' third_party/libopenjpeg20/openjpeg.c
   printf '\n# END openjpeg license note\n\n'
 
-  printf '\n# BEGIN zlib license\n\n'
-  sed -n '/^\/\* zlib.h/,/\*\//p' third_party/zlib/zlib.h
-  printf '\n# END zlib license\n\n'
-
-  printf '\n# BEGIN libjpeg-turbo license file\n\n'
-  cat third_party/libjpeg_turbo/LICENSE.md
-  printf '\n# END libjpeg-turbo license file\n\n'
-
-  printf '\n# BEGIN IJG (Independent JPEG Group) legal information\n\n'
-  sed -n '115,159p' third_party/libjpeg_turbo/README.ijg
-  printf '\n# END IJG (Independent JPEG Group) legal information\n\n'
-
-  printf '\n# BEGIN ICU (International Components for Unicode) license file\n\n'
-  cat third_party/icu/LICENSE
-  printf '\n# END ICU (International Components for Unicode) license file\n'
 ) >LICENSES
