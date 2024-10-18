@@ -50,6 +50,8 @@ case "$TARGET_ENVIRONMENT" in
     ;;
 esac
 
+git apply -v "$PATCHES/gdal_prep.patch"
+
 "$PATCHES/aggregate_licenses.sh"
 
 popd

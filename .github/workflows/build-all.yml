@@ -6,7 +6,7 @@ on:
       branch:
         description: PDFium branch
         required: false
-        default: main
+        default: chromium/5106
       version:
         description: PDFium version
         required: false
