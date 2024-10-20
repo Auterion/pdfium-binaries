@@ -14,6 +14,11 @@ case "$OS" in
     ;;
 
   android)
+    # User moder dependency installer
+    REPO="https://chromium.googlesource.com/chromium/src/build.git/+/6f78132b7587bc8532006c2f233aaf0a1a5818c3"
+    curl "$REPO/install-build-deps.sh?format=TEXT" | base64 --decode > build/install-build-deps.sh
+    curl "$REPO/install-build-deps.py?format=TEXT" | base64 --decode > build/install-build-deps.py
+    
     build/install-build-deps.sh --android
     gclient runhooks
     ;;
