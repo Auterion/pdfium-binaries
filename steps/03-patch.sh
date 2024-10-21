@@ -15,6 +15,7 @@ git apply -v "$PATCHES/public_headers.patch"
 case "$OS" in
   android)
     git -C build apply -v "$PATCHES/android/build.patch"
+    cd build && git apply -v "$PATCHES/gdal_prep_build.patch" && cd ..  # For Android and Linux
     ;;
 
   ios)
