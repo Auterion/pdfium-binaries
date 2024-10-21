@@ -24,6 +24,7 @@ on:
       target_cpu:
         description: Target CPU
         type: choice
+        default: arm64
         options:
           - arm
           - arm64
@@ -33,7 +34,7 @@ on:
       target_environment:
         description: Target environment
         type: choice
-        default: ''
+        default: device
         options:
           - ''
           - device
