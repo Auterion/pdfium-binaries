@@ -119,3 +119,5 @@ case "$TARGET_OS" in
     sudo xcode-select -s "/Applications/Xcode_15.0.1.app"
     ;;
 esac
+
+sudo apt-get install -y ninja-build
