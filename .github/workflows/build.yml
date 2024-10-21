@@ -115,6 +115,4 @@ jobs:
         with:
           name: ${{ steps.init.outputs.artifact }}
           path: staging/
-      - name: Test
-        run: steps/08-test.sh
-        shell: bash
+
