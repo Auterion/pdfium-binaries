@@ -20,6 +20,7 @@ mkdir -p "$BUILD"
   echo "pdf_enable_xfa = $ENABLE_V8"
   echo "treat_warnings_as_errors = false"
   echo "is_component_build = false"
+  echo "use_rtti = true"
 
   if [ "$ENABLE_V8" == "true" ]; then
     echo "v8_use_external_startup_data = false"
@@ -30,6 +31,10 @@ mkdir -p "$BUILD"
     android)
       echo "clang_use_chrome_plugins = false"
       echo "default_min_sdk_version = 21"
+      echo "use_custom_libcxx = false"
+      echo "use_sysroot = false"
+      echo "pdf_use_skia = false"
+      echo "pdf_use_skia_paths = false"
       ;;
     ios)
       [ -n "$TARGET_ENVIRONMENT" ] && echo "target_environment = \"$TARGET_ENVIRONMENT\""
